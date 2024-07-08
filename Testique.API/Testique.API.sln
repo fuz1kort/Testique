@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{FC2D3AC5-53B2-462A-9E64-983C92B5DF13}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{DD5A1E7A-C0E9-49E7-B25B-6764C9922498}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApi", "WebApi", "{CBADF528-C8D4-4802-A21C-3661692EAED6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testique.API.Application", "Testique.API.Application\Testique.API.Application.csproj", "{EC42FD7B-BBB1-4715-8983-F6EA9FDB4DB1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC42FD7B-BBB1-4715-8983-F6EA9FDB4DB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC42FD7B-BBB1-4715-8983-F6EA9FDB4DB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC42FD7B-BBB1-4715-8983-F6EA9FDB4DB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC42FD7B-BBB1-4715-8983-F6EA9FDB4DB1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EC42FD7B-BBB1-4715-8983-F6EA9FDB4DB1} = {FC2D3AC5-53B2-462A-9E64-983C92B5DF13}
+	EndGlobalSection
+EndGlobal
