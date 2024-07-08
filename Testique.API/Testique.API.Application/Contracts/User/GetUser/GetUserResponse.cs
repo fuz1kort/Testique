@@ -19,9 +19,4 @@ public class GetUserResponse
     /// Почта
     /// </summary>
     public string Email { get; set; } = default!;
-    
-    /// <summary>
-    /// ИД информации о юзере
-    /// </summary>
-    public Guid? UserInfoId { get; set; }
 }

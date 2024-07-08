@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Testique.API.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d6c4ecb80a5dd960b93e25a26dfc9289462f8562")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+96da556cb7ac694f8d6327cd4228fcfdecf823a4")]
 [assembly: System.Reflection.AssemblyProductAttribute("Testique.API.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Testique.API.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

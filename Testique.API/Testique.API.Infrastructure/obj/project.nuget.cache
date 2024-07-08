@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "LOM49wLld+sBb3nyW4t91RNbX1zKfVq64liF+UIV68A52lDQ/u2QpXvzwEVIXkZz6wgHgkhKNoo9qGCSYZUjlg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\gafar\\source\\fuz1kort\\Testique\\Testique.API\\Testique.API.Infrastructure\\Testique.API.Infrastructure.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gafar\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\gafar\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
+    "C:\\Users\\gafar\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\gafar\\.nuget\\packages\\microsoft.extensions.options\\8.0.2\\microsoft.extensions.options.8.0.2.nupkg.sha512",
+    "C:\\Users\\gafar\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "C:\\Users\\gafar\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
