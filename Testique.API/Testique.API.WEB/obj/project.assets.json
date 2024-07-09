@@ -1643,13 +1643,24 @@
           "MediatR": "12.3.0",
           "Microsoft.AspNetCore.Identity": "2.2.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.6",
-          "Microsoft.AspNetCore.Identity.UI": "8.0.7"
+          "Microsoft.AspNetCore.Identity.UI": "8.0.7",
+          "Testique.API.Domain": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Testique.API.Application.dll": {}
         },
         "runtime": {
           "bin/placeholder/Testique.API.Application.dll": {}
+        }
+      },
+      "Testique.API.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Testique.API.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Testique.API.Domain.dll": {}
         }
       },
       "Testique.API.Infrastructure/1.0.0": {
@@ -4284,6 +4295,11 @@
       "type": "project",
       "path": "../Testique.API.Application/Testique.API.Application.csproj",
       "msbuildProject": "../Testique.API.Application/Testique.API.Application.csproj"
+    },
+    "Testique.API.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Testique.API.Domain/Testique.API.Domain.csproj",
+      "msbuildProject": "../Testique.API.Domain/Testique.API.Domain.csproj"
     },
     "Testique.API.Infrastructure/1.0.0": {
       "type": "project",

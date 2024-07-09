@@ -902,6 +902,16 @@
             "related": ".xml"
           }
         }
+      },
+      "Testique.API.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Testique.API.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Testique.API.Domain.dll": {}
+        }
       }
     }
   },
@@ -2155,6 +2165,11 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Testique.API.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Testique.API.Domain/Testique.API.Domain.csproj",
+      "msbuildProject": "../Testique.API.Domain/Testique.API.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2162,7 +2177,8 @@
       "MediatR >= 12.3.0",
       "Microsoft.AspNetCore.Identity >= 2.2.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 8.0.6",
-      "Microsoft.AspNetCore.Identity.UI >= 8.0.7"
+      "Microsoft.AspNetCore.Identity.UI >= 8.0.7",
+      "Testique.API.Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2191,7 +2207,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\gafar\\source\\fuz1kort\\Testique\\Testique.API\\Testique.API.Domain\\Testique.API.Domain.csproj": {
+              "projectPath": "C:\\Users\\gafar\\source\\fuz1kort\\Testique\\Testique.API\\Testique.API.Domain\\Testique.API.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

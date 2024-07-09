@@ -29,7 +29,7 @@ public class UserController : ControllerBase
     /// <summary>
     /// Запрос текущего пользователя
     /// </summary>
-    /// <returns>GetUserResponse(Id, Email, UserName, Roles, UserPhotoId)</returns>
+    /// <returns>GetUserResponse(Id, Email, UserName)</returns>
     [HttpGet("GetUser")]
     public async Task<GetUserResponse> GetUser(CancellationToken cancellationToken)
         => await _mediator.Send(new GetUserQuery(), cancellationToken);
@@ -37,9 +37,9 @@ public class UserController : ControllerBase
     /// <summary>
     /// Запрос пользователя по ИД
     /// </summary>
-    /// <returns>GetUserResponse(Id, UserName, FirstName, LastName, Patronymic, CountryId)</returns>
+    /// <returns>GetUserResponse(Id, UserName)</returns>
     [AllowAnonymous]
-    [HttpGet("GetUserById/{id:guid}")]
+    [HttpGet("GetUserById/{id}")]
     public async Task<GetUserByIdResponse> GetUserById(string id, CancellationToken cancellationToken)
         => await _mediator.Send(new GetUserByIdQuery(id), cancellationToken);
 }

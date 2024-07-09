@@ -13,4 +13,12 @@
       <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.7" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Features\Queries\Test\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Testique.API.Domain\Testique.API.Domain.csproj" />
+    </ItemGroup>
+
 </Project>
