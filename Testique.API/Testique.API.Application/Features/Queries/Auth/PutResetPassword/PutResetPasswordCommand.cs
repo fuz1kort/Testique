@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Testique.API.Application.Contracts.Auth.PutResetPassword;
 
 namespace Testique.API.Application.Features.Queries.Auth.PutResetPassword;
 

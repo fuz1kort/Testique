@@ -1,4 +1,5 @@
 using MediatR;
+using Testique.API.Application.Contracts.User.GetUserById;
 
 namespace Testique.API.Application.Features.Queries.User.GetUserById;
 
@@ -11,11 +12,11 @@ public class GetUserByIdQuery : IRequest<GetUserByIdResponse>
     /// Конструктор
     /// </summary>
     /// <param name="id">ИД пользователя</param>
-    public GetUserByIdQuery(Guid id)
+    public GetUserByIdQuery(string id)
         => Id = id;
 
     /// <summary>
     /// ИД пользователя
     /// </summary>
-    public Guid? Id { get; set; }
+    public string? Id { get; set; }
 }

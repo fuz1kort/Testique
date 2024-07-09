@@ -1,5 +1,6 @@
 using System.Security.Claims;
 using Microsoft.AspNetCore.Http;
+using Testique.API.Application.Interfaces;
 
 namespace Testique.API.Infrastructure.Services;
 

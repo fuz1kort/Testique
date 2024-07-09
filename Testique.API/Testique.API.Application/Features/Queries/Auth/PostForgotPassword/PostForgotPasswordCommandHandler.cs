@@ -1,6 +1,8 @@
 ﻿using System.Net;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using Testique.API.Application.Models;
 
 namespace Testique.API.Application.Features.Queries.Auth.PostForgotPassword;
 

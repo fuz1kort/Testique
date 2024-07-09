@@ -1,35 +1,32 @@
 using MediatR;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Localization;
+using Testique.API.Application.Contracts.User.GetUserById;
+using Testique.API.Application.Interfaces;
 
 namespace Testique.API.Application.Features.Queries.User.GetUserById;
 
 /// <summary>
 /// Обработчик для <see cref="GetUserByIdQuery"/>
 /// </summary>
-public class GetUserByIdQueryHandler(IDbContext dbContext, IStringLocalizer<ExceptionMessages> localizer)
+public class GetUserByIdQueryHandler(IDbContext dbContext)
     : IRequestHandler<GetUserByIdQuery, GetUserByIdResponse>
 {
     /// <inheritdoc />
     public async Task<GetUserByIdResponse> Handle(GetUserByIdQuery request, CancellationToken cancellationToken)
     {
         if (request is null)
-            throw new RequestException(localizer[nameof(RequestException.RequestIsEmpty)]);
+            throw new Exception();
 
-        var userInfoFromDb = await dbContext.UserInfos
-                                 .Include(x => x.User)
-                                 .Include(x => x.Country)
-                                 .FirstOrDefaultAsync(x => x.UserId == request.Id || x.Id == request.Id,
+        var userInfoFromDb = await dbContext.Users
+                                 .FirstOrDefaultAsync(x => x.Id == request.Id || x.Id == request.Id,
                                      cancellationToken)
-                             ?? throw new UserException(localizer[nameof(UserException.UserByIdNotFound)]);
+                             ??    throw new Exception();
 
         return new GetUserByIdResponse
         {
             Id = userInfoFromDb.Id,
-            UserName = userInfoFromDb.User.UserName ?? "Unknown",
-            FirstName = userInfoFromDb.FirstName,
-            LastName = userInfoFromDb.LastName,
-            Patronymic = userInfoFromDb.Patronymic,
-            CountryName = userInfoFromDb.Country.Name,
-            ImageId = userInfoFromDb.ImageId
+            UserName = userInfoFromDb.UserName ?? "Unknown",
         };
     }
 }

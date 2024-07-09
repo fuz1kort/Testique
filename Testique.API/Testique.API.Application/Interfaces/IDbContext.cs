@@ -9,11 +9,6 @@ public interface IDbContext
     /// Пользователи
     /// </summary>
     public DbSet<IdentityUser> Users { get; set; }
-    
-    /// <summary>
-    /// Роли
-    /// </summary>
-    public DbSet<IdentityRole> Roles { get; set; }
 
     /// <summary>
     /// Метод сохранения

@@ -1,4 +1,5 @@
 using MediatR;
+using Testique.API.Application.Contracts.Auth.PostLogin;
 
 namespace Testique.API.Application.Features.Queries.Auth.PostLogin;
 

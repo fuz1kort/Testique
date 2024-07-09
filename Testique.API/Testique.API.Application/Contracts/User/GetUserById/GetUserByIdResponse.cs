@@ -8,7 +8,7 @@ public class GetUserByIdResponse
     /// <summary>
     /// ИД
     /// </summary>
-    public Guid Id { get; set; }
+    public string Id { get; set; } = default!;
     
     /// <summary>
     /// Никнейм

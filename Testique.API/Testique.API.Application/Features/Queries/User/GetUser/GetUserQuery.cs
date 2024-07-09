@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Testique.API.Application.Contracts.User.GetUser;
 
 namespace Testique.API.Application.Features.Queries.User.GetUser;
 

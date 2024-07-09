@@ -1,5 +1,8 @@
 ﻿using System.Net;
 using System.Net.Mail;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.Extensions.Options;
+using Testique.API.Application.Models;
 
 namespace Testique.API.Infrastructure.Services;
 

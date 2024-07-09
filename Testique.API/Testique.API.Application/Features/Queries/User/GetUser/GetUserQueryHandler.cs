@@ -1,5 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Identity;
+using Testique.API.Application.Contracts.User.GetUser;
+using Testique.API.Application.Interfaces;
 
 namespace Testique.API.Application.Features.Queries.User.GetUser;
 
@@ -7,10 +9,9 @@ namespace Testique.API.Application.Features.Queries.User.GetUser;
 /// Обработчик для <see cref="GetUserQuery"/>
 /// </summary>
 public class GetUserQueryHandler(
-    UserManager<Domain.Entities.User> userManager,
+    UserManager<IdentityUser> userManager,
     IUserContext userContext,
-    IDbContext dbContext,
-    IStringLocalizer<ExceptionMessages> localizer)
+    IDbContext dbContext)
     : IRequestHandler<GetUserQuery, GetUserResponse>
 {
     /// <inheritdoc cref="IRequestHandler{TRequest,TResponse}"/>
@@ -19,31 +20,20 @@ public class GetUserQueryHandler(
         var userId = userContext.CurrentUserId;
 
         if (userId is null)
-            throw new UserException(localizer[nameof(UserException.PermissionDenied)]);
+            throw new Exception();
 
         var user = await userManager.FindByIdAsync(userId.ToString()!);
 
         if (user is null)
-            throw new UserException(localizer[nameof(UserException.UserByIdNotFound)]);
+            throw new Exception();
 
         var roles = (await userManager.GetRolesAsync(user)).ToList();
-
-        var userInfo = await dbContext.UserInfos
-            .Include(u => u.Image)
-            .Where(u => u.UserId == userId)
-            .FirstOrDefaultAsync(cancellationToken);
-
-        if (userInfo == null)
-            throw new UserException(localizer[nameof(UserException.UserInfoNotFound)]);
 
         return new GetUserResponse
         {
             UserId = user.Id,
             Email = user.Email!,
             UserName = user.UserName!,
-            Roles = roles,
-            UserInfoId = userInfo.Id,
-            UserPhotoId = userInfo.ImageId
         };
     }
 }

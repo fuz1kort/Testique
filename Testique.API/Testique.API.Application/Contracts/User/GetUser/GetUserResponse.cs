@@ -8,7 +8,7 @@ public class GetUserResponse
     /// <summary>
     /// Id пользователя
     /// </summary>
-    public Guid UserId { get; set; }
+    public string UserId { get; set; } = default!;
 
     /// <summary>
     /// Имя пользователя
