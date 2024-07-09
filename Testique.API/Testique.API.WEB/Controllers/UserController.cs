@@ -39,7 +39,7 @@ public class UserController : ControllerBase
     /// </summary>
     /// <returns>GetUserResponse(Id, UserName, FirstName, LastName, Patronymic, CountryId)</returns>
     [AllowAnonymous]
-    [HttpGet("GetUserInfoById/{id:guid}")]
-    public async Task<GetUserByIdResponse> GetUserInfoById(string id, CancellationToken cancellationToken)
+    [HttpGet("GetUserById/{id:guid}")]
+    public async Task<GetUserByIdResponse> GetUserById(string id, CancellationToken cancellationToken)
         => await _mediator.Send(new GetUserByIdQuery(id), cancellationToken);
 }

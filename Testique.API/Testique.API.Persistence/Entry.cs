@@ -10,7 +10,6 @@ public static class Entry
     {
         serviceCollection.AddDbContext<EfContext>();
         serviceCollection.AddScoped<IDbContext, EfContext>();
-        serviceCollection.AddTransient<Migrator>();
         serviceCollection.AddLogging();
     }
 }

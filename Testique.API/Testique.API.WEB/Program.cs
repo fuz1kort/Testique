@@ -49,10 +49,6 @@ builder.Services.AddControllers();
 
 var app = builder.Build();
 
-using var scope = app.Services.CreateScope();
-var migrator = scope.ServiceProvider.GetRequiredService<Migrator>();
-await migrator.MigrateAsync(new CancellationToken());
-
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
