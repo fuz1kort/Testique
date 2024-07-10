@@ -1,6 +1,5 @@
 using MediatR;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.Localization;
 using Testique.API.Application.Contracts.Auth.PostLogin;
 
 namespace Testique.API.Application.Features.Queries.Auth.PostLogin;

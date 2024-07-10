@@ -18,19 +18,16 @@ public class UserContext : IUserContext
     public UserContext(IHttpContextAccessor httpContextAccessor)
         => _httpContextAccessor = httpContextAccessor;
 
-    private Guid? _currentUserId;
+    private string? _currentUserId;
 
     private string? _roleName;
 
     /// <inheritdoc />
-    public Guid? CurrentUserId
+    public string? CurrentUserId
     {
         get
         {
-            _currentUserId ??= Guid.TryParse(User?.FindFirst(ClaimTypes.NameIdentifier)?.Value, out var userId)
-                ? userId
-                : null;
-
+            _currentUserId = User?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             return _currentUserId;
         }
     }

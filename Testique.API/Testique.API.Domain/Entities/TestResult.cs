@@ -22,6 +22,11 @@ public class TestResult : BaseEntity
     /// Итоговый балл за пройденный тест.
     /// </summary>
     public int Score { get; set; }
+    
+    /// <summary>
+    /// Время прохождения
+    /// </summary>
+    public TimeSpan Time { get; set; }
 
     /// <summary>
     /// Идентификатор пользователя, прошедшего тест.

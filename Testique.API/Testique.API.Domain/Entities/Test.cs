@@ -22,4 +22,14 @@ public class Test : BaseAuditableEntity
     /// Создатель теста.
     /// </summary>
     public IdentityUser Creator { get; set; } = default!;
+
+    /// <summary>
+    /// Описание теста
+    /// </summary>
+    public string Description { get; set; } = default!;
+    
+    /// <summary>
+    /// Время на прохождение
+    /// </summary>
+    public TimeSpan Time { get; set; }
 }

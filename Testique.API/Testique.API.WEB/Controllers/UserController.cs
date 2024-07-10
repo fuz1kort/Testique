@@ -1,7 +1,5 @@
-﻿using System.Globalization;
-using MediatR;
+﻿using MediatR;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using Testique.API.Application.Contracts.User.GetUser;
 using Testique.API.Application.Contracts.User.GetUserById;

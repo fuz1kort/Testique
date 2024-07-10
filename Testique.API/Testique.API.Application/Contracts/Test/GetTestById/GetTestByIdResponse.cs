@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Testique.API.Application.Contracts.Test.CreateTest;
-using Testique.API.Application.Models;
-using Testique.API.Domain.Entities;
+﻿using Testique.API.Application.Models;
 
 namespace Testique.API.Application.Contracts.Test.GetTestById;
 
@@ -18,9 +15,9 @@ public class GetTestByIdResponse
     /// Список вопросов, содержащихся в тесте.
     /// </summary>
     public List<QuestionDto> Questions { get; set; } = default!;
-    
+
     /// <summary>
     /// Идентификатор создателя теста.
     /// </summary>
-    public string CreatorId { get; set; }
+    public string CreatorId { get; set; } = default!;
 }

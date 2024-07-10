@@ -13,5 +13,5 @@ public class CreateTestResponse
     /// <summary>
     /// Сообщение о результате операции.
     /// </summary>
-    public string Message { get; set; }
+    public string Message { get; set; } = default!;
 }

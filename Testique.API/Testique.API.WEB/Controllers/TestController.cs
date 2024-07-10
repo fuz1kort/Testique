@@ -2,10 +2,14 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Testique.API.Application.Contracts.Test.CreateTest;
+using Testique.API.Application.Contracts.Test.GenerateTestLink;
 using Testique.API.Application.Contracts.Test.GetAvailableTests;
+using Testique.API.Application.Contracts.Test.GetPassedTests;
 using Testique.API.Application.Contracts.Test.GetTestById;
 using Testique.API.Application.Features.Queries.Test.CreateTest;
+using Testique.API.Application.Features.Queries.Test.GenerateTestLink;
 using Testique.API.Application.Features.Queries.Test.GetAvailableTests;
+using Testique.API.Application.Features.Queries.Test.GetPassedTests;
 using Testique.API.Application.Features.Queries.Test.GetTestById;
 
 namespace Testique.API.WEB.Controllers;
@@ -33,6 +37,13 @@ public class TestController : ControllerBase
     [HttpGet("GetAvailableTests")]
     public async Task<GetAvailableTestsResponse> GetAvailableTests()
         => await _mediator.Send(new GetAvailableTestsQuery());
+    
+    /// <summary>
+    /// Возвращает все пройденные тесты
+    /// </summary>
+    [HttpGet("GetPassedTestsResponse")]
+    public async Task<GetPassedTestsResponse> GetPassedTests()
+        => await _mediator.Send(new GetPassedTestsQuery());
 
     /// <summary>
     /// Возвращает тест по ID
@@ -47,4 +58,13 @@ public class TestController : ControllerBase
     [HttpPost("CreateTest")]
     public async Task<CreateTestResponse> CreateTest(CreateTestRequest request) 
         => await _mediator.Send(new CreateTestCommand(request));
+    
+    /// <summary>
+    /// Генерирует ссылку на прохождение теста.
+    /// </summary>
+    /// <param name="testId">ID теста.</param>
+    /// <returns>Ссылка на прохождение теста.</returns>
+    [HttpGet("GenerateTestLink/{testId:guid}")]
+    public async Task<GenerateTestLinkResponse> GenerateTestLink(Guid testId)
+        => await _mediator.Send(new GenerateTestLinkQuery(testId));
 }

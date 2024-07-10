@@ -22,6 +22,16 @@ public class CreateTestRequest
     /// </summary>
     public List<QuestionDto> Questions { get; set; }
     
+    /// <summary>
+    /// Описание теста
+    /// </summary>
+    public string Description { get; set; } = default!;
+    
+    /// <summary>
+    /// Время на прохождение
+    /// </summary>
+    public TimeSpan Time { get; set; }
+    
     public CreateTestRequest() { }
 
     public CreateTestRequest(CreateTestRequest request)
@@ -29,5 +39,7 @@ public class CreateTestRequest
         Name = request.Name;
         CreatorId = request.CreatorId;
         Questions = request.Questions;
+        Description = request.Description;
+        Time = request.Time;
     }
 }

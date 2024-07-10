@@ -11,12 +11,18 @@ namespace Testique.API.Application.Features.Queries.Test.CreateTest;
 public class CreateTestCommandHandler : IRequestHandler<CreateTestCommand, CreateTestResponse>
 {
     private readonly IDbContext _context;
+    private readonly IUserContext _userContext;
 
     /// <summary>
     /// Конструктор для инициализации обработчика команды.
     /// </summary>
     /// <param name="context">Контекст базы данных.</param>
-    public CreateTestCommandHandler(IDbContext context) => _context = context;
+    /// <param name="userContext"></param>
+    public CreateTestCommandHandler(IDbContext context, IUserContext userContext)
+    {
+        _context = context;
+        _userContext = userContext;
+    }
 
     /// <summary>
     /// Обрабатывает команду на создание нового теста.
@@ -29,7 +35,9 @@ public class CreateTestCommandHandler : IRequestHandler<CreateTestCommand, Creat
         var test = new Domain.Entities.Test
         {
             Name = request.Name,
-            CreatedBy = request.CreatorId,
+            CreatedBy = _userContext.CurrentUserId.ToString(),
+            Description = request.Description,
+            Time = request.Time,
             Questions = request.Questions.Select(q => new Question
             {
                 Content = q.Content,

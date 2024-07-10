@@ -8,7 +8,7 @@ public interface IUserContext
     /// <summary>
     /// ИД текущего пользователя
     /// </summary>
-    Guid? CurrentUserId { get; }
+    string? CurrentUserId { get; }
     
     /// <summary>
     /// Название роли текущего пользователя
