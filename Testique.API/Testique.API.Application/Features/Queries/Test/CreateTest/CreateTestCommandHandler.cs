@@ -35,7 +35,7 @@ public class CreateTestCommandHandler : IRequestHandler<CreateTestCommand, Creat
         var test = new Domain.Entities.Test
         {
             Name = request.Name,
-            CreatedBy = _userContext.CurrentUserId.ToString(),
+            CreatedBy = _userContext.CurrentUserId,
             Description = request.Description,
             Time = request.Time,
             Questions = request.Questions.Select(q => new Question

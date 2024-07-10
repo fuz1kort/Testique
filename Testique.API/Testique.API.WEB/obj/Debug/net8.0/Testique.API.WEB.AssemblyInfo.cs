@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Testique.API.WEB")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4d5681bb4b92994b3d2d86fdff5ca61e0ee65ea2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cd8d08ddab4209ffc7344f84e719847b8c93a42f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Testique.API.WEB")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Testique.API.WEB")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

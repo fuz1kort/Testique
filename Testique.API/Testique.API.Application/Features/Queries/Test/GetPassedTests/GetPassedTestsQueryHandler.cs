@@ -15,7 +15,7 @@ public class GetPassedTestsQueryHandler(IDbContext context, IUserContext userCon
     public async Task<GetPassedTestsResponse> Handle(GetPassedTestsQuery request, CancellationToken cancellationToken)
     {
         var testResults = await context.TestResults
-            .Where(tr => tr.UserId == userContext.CurrentUserId)
+            .Where(tr => tr.UserId.Equals(userContext.CurrentUserId))
             .Include(tr => tr.QuestionResults)
             .ToListAsync(cancellationToken);
 
@@ -25,6 +25,7 @@ public class GetPassedTestsQueryHandler(IDbContext context, IUserContext userCon
             TestName = tr.TestName,
             Score = tr.Score,
             Time = tr.Time,
+            UserId = userContext.CurrentUserId,
             QuestionResults = tr.QuestionResults.Select(qr => new QuestionResultDto
             {
                 QuestionId = qr.QuestionId,

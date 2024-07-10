@@ -10,4 +10,5 @@ public class TestResultDto
     public TimeSpan Time { get; set; }
     public int Score { get; set; }
     public List<QuestionResultDto> QuestionResults { get; set; } = default!;
+    public string UserId { get; set; } = default!;
 }

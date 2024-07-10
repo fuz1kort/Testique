@@ -21,7 +21,7 @@ public class GetUserQueryHandler(
         if (userId is null)
             throw new Exception();
 
-        var user = await userManager.FindByIdAsync(userId.ToString()!);
+        var user = await userManager.FindByIdAsync(userId);
 
         if (user is null)
             throw new Exception();

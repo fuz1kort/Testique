@@ -10,12 +10,12 @@ public class CreateTestRequest
     /// <summary>
     /// Название теста.
     /// </summary>
-    public string Name { get; set; }
+    public string Name { get; set; } = default!;
 
     /// <summary>
     /// ID создателя теста.
     /// </summary>
-    public string CreatorId { get; set; }
+    public string CreatorId { get; set; } = default!;
 
     /// <summary>
     /// Список вопросов для теста.

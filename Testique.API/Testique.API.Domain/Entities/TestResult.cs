@@ -13,6 +13,8 @@ public class TestResult : BaseEntity
     /// </summary>
     public string TestName { get; set; } = default!;
 
+    public Test Test { get; set; } = default!;
+
     /// <summary>
     /// Список результатов по каждому вопросу теста.
     /// </summary>

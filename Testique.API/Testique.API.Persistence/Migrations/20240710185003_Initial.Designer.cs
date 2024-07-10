@@ -12,7 +12,7 @@ using Testique.API.Persistence.Context;
 namespace Testique.API.Persistence.Migrations
 {
     [DbContext(typeof(EfContext))]
-    [Migration("20240710111731_Initial")]
+    [Migration("20240710185003_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -305,9 +305,16 @@ namespace Testique.API.Persistence.Migrations
                     b.Property<DateTime?>("CreatedDate")
                         .HasColumnType("timestamp with time zone");
 
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text");
+
+                    b.Property<TimeSpan>("Time")
+                        .HasColumnType("interval");
 
                     b.Property<Guid?>("UpdatedBy")
                         .HasColumnType("uuid");
@@ -331,15 +338,23 @@ namespace Testique.API.Persistence.Migrations
                     b.Property<int>("Score")
                         .HasColumnType("integer");
 
+                    b.Property<Guid>("TestId")
+                        .HasColumnType("uuid");
+
                     b.Property<string>("TestName")
                         .IsRequired()
                         .HasColumnType("text");
+
+                    b.Property<TimeSpan>("Time")
+                        .HasColumnType("interval");
 
                     b.Property<string>("UserId")
                         .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("TestId");
 
                     b.HasIndex("UserId");
 
@@ -439,11 +454,19 @@ namespace Testique.API.Persistence.Migrations
 
             modelBuilder.Entity("Testique.API.Domain.Entities.TestResult", b =>
                 {
+                    b.HasOne("Testique.API.Domain.Entities.Test", "Test")
+                        .WithMany()
+                        .HasForeignKey("TestId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Test");
 
                     b.Navigation("User");
                 });
