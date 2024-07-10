@@ -14,10 +14,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Features\Queries\Test\" />
-    </ItemGroup>
-
-    <ItemGroup>
       <ProjectReference Include="..\Testique.API.Domain\Testique.API.Domain.csproj" />
     </ItemGroup>
 

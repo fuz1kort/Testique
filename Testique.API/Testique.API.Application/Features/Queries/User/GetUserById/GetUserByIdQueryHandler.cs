@@ -1,6 +1,5 @@
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Localization;
 using Testique.API.Application.Contracts.User.GetUserById;
 using Testique.API.Application.Interfaces;
 

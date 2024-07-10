@@ -16,4 +16,8 @@ public class Question : BaseEntity
     /// Список ответов на данный вопрос.
     /// </summary>
     public List<Answer> Answers { get; set; } = default!;
+    
+    public int TestId { get; set; }
+
+    public Test Test { get; set; } = default!;
 }

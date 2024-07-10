@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Identity;
 using Testique.API.Domain.Common;
 
 namespace Testique.API.Domain.Entities;
@@ -20,5 +21,15 @@ public class TestResult : BaseAuditableEntity
     /// <summary>
     /// Итоговый балл за пройденный тест.
     /// </summary>
-    public int Score { get; set; }
+    public Guid Score { get; set; }
+    
+    /// <summary>
+    /// Идентификатор пользователя, прошедшего тест.
+    /// </summary>
+    public Guid UserId { get; set; }
+
+    /// <summary>
+    /// Пользователь, прошедший тест.
+    /// </summary>
+    public IdentityUser User { get; set; } = default!;
 }

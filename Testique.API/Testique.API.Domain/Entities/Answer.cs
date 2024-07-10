@@ -16,4 +16,8 @@ public class Answer: BaseEntity
     /// Определяет, является ли ответ правильным.
     /// </summary>
     public bool IsCorrect { get; set; }
+    
+    public Guid QuestionId { get; set; }
+
+    public Question Question { get; set; } = default!;
 }

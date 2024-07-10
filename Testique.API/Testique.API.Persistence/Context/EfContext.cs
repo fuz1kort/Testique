@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Testique.API.Application.Interfaces;
@@ -22,11 +21,6 @@ public class EfContext : IdentityDbContext, IDbContext
         : base(options)
     {
     }
-    
-        /// <summary>
-    /// Набор данных для таблицы "Users", представляющей пользователей.
-    /// </summary>
-    public DbSet<IdentityUser> Users { get; set; }
 
     /// <summary>
     /// Набор данных для таблицы "Tests", представляющей тесты.
@@ -68,7 +62,7 @@ public class EfContext : IdentityDbContext, IDbContext
         // Настройка отношений между таблицей "Tests" и таблицей "Users".
         modelBuilder.Entity<Test>()
             .HasOne(t => t.Creator)
-            .WithMany(u => u.CreatedTests)
+            .WithMany()
             .HasForeignKey(t => t.CreatorId);
 
         // Настройка отношений между таблицей "Questions" и таблицей "Answers".
@@ -86,10 +80,9 @@ public class EfContext : IdentityDbContext, IDbContext
         // Настройка отношений между таблицей "TestResults" и таблицей "Users".
         modelBuilder.Entity<TestResult>()
             .HasOne(tr => tr.User)
-            .WithMany(u => u.TestResults)
+            .WithMany()
             .HasForeignKey(tr => tr.UserId);
 
         base.OnModelCreating(modelBuilder);
     }
-}
 }

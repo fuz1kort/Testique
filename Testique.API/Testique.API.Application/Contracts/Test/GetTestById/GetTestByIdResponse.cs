@@ -1,13 +1,14 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using Testique.API.Domain.Common;
+using Testique.API.Application.Contracts.Test.CreateTest;
+using Testique.API.Application.Models;
+using Testique.API.Domain.Entities;
 
-namespace Testique.API.Domain.Entities;
+namespace Testique.API.Application.Contracts.Test.GetTestById;
 
-/// <summary>
-/// Представляет тест, содержащий вопросы.
-/// </summary>
-public class Test : BaseAuditableEntity
+public class GetTestByIdResponse
 {
+    public Guid Id { get; set; }
+    
     /// <summary>
     /// Название теста.
     /// </summary>
@@ -16,7 +17,7 @@ public class Test : BaseAuditableEntity
     /// <summary>
     /// Список вопросов, содержащихся в тесте.
     /// </summary>
-    public List<Question> Questions { get; set; } = default!;
+    public List<QuestionDto> Questions { get; set; } = default!;
     
     /// <summary>
     /// Идентификатор создателя теста.

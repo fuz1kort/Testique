@@ -10,8 +10,7 @@ namespace Testique.API.Application.Features.Queries.User.GetUser;
 /// </summary>
 public class GetUserQueryHandler(
     UserManager<IdentityUser> userManager,
-    IUserContext userContext,
-    IDbContext dbContext)
+    IUserContext userContext)
     : IRequestHandler<GetUserQuery, GetUserResponse>
 {
     /// <inheritdoc cref="IRequestHandler{TRequest,TResponse}"/>
@@ -26,8 +25,6 @@ public class GetUserQueryHandler(
 
         if (user is null)
             throw new Exception();
-
-        var roles = (await userManager.GetRolesAsync(user)).ToList();
 
         return new GetUserResponse
         {

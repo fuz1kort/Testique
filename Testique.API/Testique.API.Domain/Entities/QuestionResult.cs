@@ -7,6 +7,9 @@ namespace Testique.API.Domain.Entities;
 /// </summary>
 public class QuestionResult : BaseEntity
 {
+    public Guid TestResultId { get; set; }
+    public Guid QuestionId { get; set; }
+    
     /// <summary>
     /// Текст вопроса.
     /// </summary>
@@ -15,7 +18,7 @@ public class QuestionResult : BaseEntity
     /// <summary>
     /// Идентификатор выбранного ответа.
     /// </summary>
-    public int SelectedAnswerId { get; set; }
+    public Guid SelectedAnswerId { get; set; }
 
     /// <summary>
     /// Определяет, является ли выбранный ответ правильным.
