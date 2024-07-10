@@ -1,0 +1,13 @@
+C:\Users\gafar\source\fuz1kort\Testique\Testique.API\Testique.API.Domain\bin\Debug\net8.0\Testique.API.Domain.deps.json
+C:\Users\gafar\source\fuz1kort\Testique\Testique.API\Testique.API.Domain\bin\Debug\net8.0\Testique.API.Domain.dll
+C:\Users\gafar\source\fuz1kort\Testique\Testique.API\Testique.API.Domain\bin\Debug\net8.0\Testique.API.Domain.pdb
+C:\Users\gafar\source\fuz1kort\Testique\Testique.API\Testique.API.Domain\obj\Debug\net8.0\Testique.API.Domain.csproj.AssemblyReference.cache
+C:\Users\gafar\source\fuz1kort\Testique\Testique.API\Testique.API.Domain\obj\Debug\net8.0\Testique.API.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gafar\source\fuz1kort\Testique\Testique.API\Testique.API.Domain\obj\Debug\net8.0\Testique.API.Domain.AssemblyInfoInputs.cache
+C:\Users\gafar\source\fuz1kort\Testique\Testique.API\Testique.API.Domain\obj\Debug\net8.0\Testique.API.Domain.AssemblyInfo.cs
+C:\Users\gafar\source\fuz1kort\Testique\Testique.API\Testique.API.Domain\obj\Debug\net8.0\Testique.API.Domain.csproj.CoreCompileInputs.cache
+C:\Users\gafar\source\fuz1kort\Testique\Testique.API\Testique.API.Domain\obj\Debug\net8.0\Testique.API.Domain.sourcelink.json
+C:\Users\gafar\source\fuz1kort\Testique\Testique.API\Testique.API.Domain\obj\Debug\net8.0\Testique.API.Domain.dll
+C:\Users\gafar\source\fuz1kort\Testique\Testique.API\Testique.API.Domain\obj\Debug\net8.0\refint\Testique.API.Domain.dll
+C:\Users\gafar\source\fuz1kort\Testique\Testique.API\Testique.API.Domain\obj\Debug\net8.0\Testique.API.Domain.pdb
+C:\Users\gafar\source\fuz1kort\Testique\Testique.API\Testique.API.Domain\obj\Debug\net8.0\ref\Testique.API.Domain.dll

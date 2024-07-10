@@ -17,7 +17,7 @@ public class Question : BaseEntity
     /// </summary>
     public List<Answer> Answers { get; set; } = default!;
     
-    public int TestId { get; set; }
+    public Guid TestId { get; set; }
 
     public Test Test { get; set; } = default!;
 }

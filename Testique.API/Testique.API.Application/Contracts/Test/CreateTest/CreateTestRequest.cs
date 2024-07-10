@@ -10,15 +10,24 @@ public class CreateTestRequest
     /// <summary>
     /// Название теста.
     /// </summary>
-    public string Name { get; set; } = default!;
+    public string Name { get; set; }
 
     /// <summary>
     /// ID создателя теста.
     /// </summary>
-    public int CreatorId { get; set; }
+    public string CreatorId { get; set; }
 
     /// <summary>
     /// Список вопросов для теста.
     /// </summary>
-    public List<QuestionDto> Questions { get; set; } = default!;
+    public List<QuestionDto> Questions { get; set; }
+    
+    public CreateTestRequest() { }
+
+    public CreateTestRequest(CreateTestRequest request)
+    {
+        Name = request.Name;
+        CreatorId = request.CreatorId;
+        Questions = request.Questions;
+    }
 }

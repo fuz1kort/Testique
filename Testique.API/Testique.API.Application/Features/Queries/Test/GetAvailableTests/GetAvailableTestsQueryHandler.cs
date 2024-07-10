@@ -15,14 +15,16 @@ public class GetAvailableTestsQueryHandler(IDbContext dbContext) : IRequestHandl
         var tests = await dbContext.Tests.Select(t => new GetAvailableTestsResponseItem
         {
             Id = t.Id,
-            CreatorId = t.CreatorId,
+            CreatorId = t.CreatedBy ?? "unknown" ,
             Name = t.Name
         })
         .ToListAsync(cancellationToken);
-
-        return new GetAvailableTestsResponse
+        
+        var response = new GetAvailableTestsResponse
         {
-            Items = tests
+            AvailableTests = tests
         };
+
+        return response;
     }
 }

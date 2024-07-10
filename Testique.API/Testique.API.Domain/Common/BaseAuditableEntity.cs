@@ -5,7 +5,7 @@ namespace Testique.API.Domain.Common;
 public class BaseAuditableEntity : BaseEntity, IAuditableEntity
 {
     /// <inheritdoc />
-    public Guid? CreatedBy { get; set; }
+    public string? CreatedBy { get; set; }
 
     /// <inheritdoc />
     public DateTime? CreatedDate { get; set; }

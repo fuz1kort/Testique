@@ -2,5 +2,5 @@
 
 public class GetAvailableTestsResponse
 {
-    public List<GetAvailableTestsResponseItem> Items = default!;
+    public List<GetAvailableTestsResponseItem> AvailableTests { get; set; } = default!;
 }

@@ -8,9 +8,9 @@ public class GetAvailableTestsResponseItem
     /// Название теста.
     /// </summary>
     public string Name { get; set; } = default!;
-    
+
     /// <summary>
     /// Идентификатор создателя теста.
     /// </summary>
-    public Guid CreatorId { get; set; }
+    public string CreatorId { get; set; } = default!;
 }

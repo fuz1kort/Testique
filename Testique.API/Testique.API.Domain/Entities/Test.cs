@@ -17,11 +17,6 @@ public class Test : BaseAuditableEntity
     /// Список вопросов, содержащихся в тесте.
     /// </summary>
     public List<Question> Questions { get; set; } = default!;
-    
-    /// <summary>
-    /// Идентификатор создателя теста.
-    /// </summary>
-    public Guid CreatorId { get; set; }
 
     /// <summary>
     /// Создатель теста.

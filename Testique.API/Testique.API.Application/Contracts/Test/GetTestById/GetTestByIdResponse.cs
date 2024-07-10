@@ -22,10 +22,5 @@ public class GetTestByIdResponse
     /// <summary>
     /// Идентификатор создателя теста.
     /// </summary>
-    public Guid CreatorId { get; set; }
-
-    /// <summary>
-    /// Создатель теста.
-    /// </summary>
-    public IdentityUser Creator { get; set; } = default!;
+    public string CreatorId { get; set; }
 }

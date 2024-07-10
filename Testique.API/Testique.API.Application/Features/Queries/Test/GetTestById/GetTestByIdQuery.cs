@@ -11,7 +11,7 @@ public class GetTestByIdQuery : IRequest<GetTestByIdResponse>
     /// <summary>
     /// Конструктор
     /// </summary>
-    /// <param name="id">ИД пользователя</param>
+    /// <param name="id">ИД теста</param>
     public GetTestByIdQuery(Guid id)
         => Id = id;
 

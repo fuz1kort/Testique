@@ -1,8 +1,10 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Testique.API.Application.Contracts.Test.CreateTest;
 using Testique.API.Application.Contracts.Test.GetAvailableTests;
 using Testique.API.Application.Contracts.Test.GetTestById;
+using Testique.API.Application.Features.Queries.Test.CreateTest;
 using Testique.API.Application.Features.Queries.Test.GetAvailableTests;
 using Testique.API.Application.Features.Queries.Test.GetTestById;
 

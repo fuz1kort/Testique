@@ -63,7 +63,7 @@ public class EfContext : IdentityDbContext, IDbContext
         modelBuilder.Entity<Test>()
             .HasOne(t => t.Creator)
             .WithMany()
-            .HasForeignKey(t => t.CreatorId);
+            .HasForeignKey(t => t.CreatedBy);
 
         // Настройка отношений между таблицей "Questions" и таблицей "Answers".
         modelBuilder.Entity<Question>()

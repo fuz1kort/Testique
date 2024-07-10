@@ -6,7 +6,7 @@ namespace Testique.API.Domain.Entities;
 /// <summary>
 /// Представляет результат прохождения теста.
 /// </summary>
-public class TestResult : BaseAuditableEntity
+public class TestResult : BaseEntity
 {
     /// <summary>
     /// Название теста, который был пройден.
@@ -21,12 +21,12 @@ public class TestResult : BaseAuditableEntity
     /// <summary>
     /// Итоговый балл за пройденный тест.
     /// </summary>
-    public Guid Score { get; set; }
-    
+    public int Score { get; set; }
+
     /// <summary>
     /// Идентификатор пользователя, прошедшего тест.
     /// </summary>
-    public Guid UserId { get; set; }
+    public string UserId { get; set; } = default!;
 
     /// <summary>
     /// Пользователь, прошедший тест.
