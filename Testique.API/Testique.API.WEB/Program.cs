@@ -33,7 +33,11 @@ builder.Services.AddPersistenceLayer();
 builder.Services.AddApplicationLayer(builder.Configuration);
 
 builder.Services.AddAuthorization();
-builder.Services.AddAuthentication().AddCookie(cookie => cookie.Cookie.SameSite = SameSiteMode.None);
+builder.Services.AddAuthentication().AddCookie(cookie =>
+{
+    cookie.Cookie.SameSite = SameSiteMode.None;
+});
+
 builder.Services.AddCors(x =>
 {
     x.AddPolicy("AllowAll", opt =>

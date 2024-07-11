@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "YoE1UEuZLftgyaE6W8dZa8pERnQTB4qC6yzo7NpJOUU=",
+  "Source": "Testique.API.WEB",
+  "BasePath": "_content/Testique.API.WEB",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,16 @@
+C:\Users\gafar\source\fuz1kort\Testique\Testique.API\Testique.API.Application\bin\Debug\net8.0\Testique.API.Application.deps.json
+C:\Users\gafar\source\fuz1kort\Testique\Testique.API\Testique.API.Application\bin\Debug\net8.0\Testique.API.Application.dll
+C:\Users\gafar\source\fuz1kort\Testique\Testique.API\Testique.API.Application\bin\Debug\net8.0\Testique.API.Application.pdb
+C:\Users\gafar\source\fuz1kort\Testique\Testique.API\Testique.API.Application\obj\Debug\net8.0\Testique.API.Application.csproj.AssemblyReference.cache
+C:\Users\gafar\source\fuz1kort\Testique\Testique.API\Testique.API.Application\obj\Debug\net8.0\Testique.API.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gafar\source\fuz1kort\Testique\Testique.API\Testique.API.Application\obj\Debug\net8.0\Testique.API.Application.AssemblyInfoInputs.cache
+C:\Users\gafar\source\fuz1kort\Testique\Testique.API\Testique.API.Application\obj\Debug\net8.0\Testique.API.Application.AssemblyInfo.cs
+C:\Users\gafar\source\fuz1kort\Testique\Testique.API\Testique.API.Application\obj\Debug\net8.0\Testique.API.Application.csproj.CoreCompileInputs.cache
+C:\Users\gafar\source\fuz1kort\Testique\Testique.API\Testique.API.Application\obj\Debug\net8.0\Testique.API.Application.sourcelink.json
+C:\Users\gafar\source\fuz1kort\Testique\Testique.API\Testique.API.Application\obj\Debug\net8.0\Testique.API.Application.dll
+C:\Users\gafar\source\fuz1kort\Testique\Testique.API\Testique.API.Application\obj\Debug\net8.0\refint\Testique.API.Application.dll
+C:\Users\gafar\source\fuz1kort\Testique\Testique.API\Testique.API.Application\obj\Debug\net8.0\Testique.API.Application.pdb
+C:\Users\gafar\source\fuz1kort\Testique\Testique.API\Testique.API.Application\obj\Debug\net8.0\ref\Testique.API.Application.dll
+C:\Users\gafar\source\fuz1kort\Testique\Testique.API\Testique.API.Application\bin\Debug\net8.0\Testique.API.Domain.dll
+C:\Users\gafar\source\fuz1kort\Testique\Testique.API\Testique.API.Application\bin\Debug\net8.0\Testique.API.Domain.pdb
+C:\Users\gafar\source\fuz1kort\Testique\Testique.API\Testique.API.Application\obj\Debug\net8.0\Testique.242737AA.Up2Date

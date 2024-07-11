@@ -1,0 +1,24 @@
+.input__group select {
+    width: 100%;
+    padding: 15px;
+    background-color: transparent;
+    color: gray;
+    font-size: 16px;
+    appearance: none; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    
+}
+
+.input__group select option {
+    background-color: #444;
+    color: #fff;
+    font-size: 16px;
+}
+
+.input__group select option:checked {
+    background-color: #666;
+    color: #fff;
+}
+

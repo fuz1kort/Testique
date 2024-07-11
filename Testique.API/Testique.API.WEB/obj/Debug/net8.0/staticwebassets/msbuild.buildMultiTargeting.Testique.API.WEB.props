@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Testique.API.WEB.props" />
+</Project>

@@ -1,0 +1,14 @@
+.project_v2_tab_content {
+    display: none;
+}
+
+.project_v2_tab_content.active {
+    display: block;
+}
+
+.project-info img {
+    width: 70px;
+    height: auto;
+    border-radius: 5px;
+}
+
